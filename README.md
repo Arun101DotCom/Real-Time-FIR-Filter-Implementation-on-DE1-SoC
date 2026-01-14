@@ -1,50 +1,104 @@
-# Real-Time-FIR-Filter-Implementation-on-DE1-SoC
-This project involved designing a real-time FIR Low-Pass Filter on a Terasic DE1-SoC FPGA using VHDL. I developed core modules for I2C/I2S codec initialization and serial-to-parallel conversion. Validated via Quartus Prime and Questa simulations, the system was hardware-tested with a 1–30kHz sweep to analyze frequency response and cut-off ranges.
+# 🚀 Real-Time-FIR-Filter-Implementation-on-DE1-SoC  
+
+** Design and Implementation of a Real-Time FIR Low-Pass Digital Filter on FPGA using VHDL  
+**Program:** MSc in Electrical & Electronic Engineering  
+**Domain:** FPGA-Based Digital Signal Processing (DSP)
+
+---
+
+## 🔬 Project Overview
+* This project focuses on the **design, implementation, and real-time validation** of a **Finite Impulse Response (FIR) Low-Pass Filter**
+* Implemented on the **Terasic DE1-SoC development board** using an **Intel Cyclone V FPGA**
+* All hardware logic is written entirely in **VHDL**
+* The system integrates:
+  * **Audio codec initialization (`I2C`)**
+  * **Serial audio communication (`I2S`)**
+  * **Serial-to-parallel data conversion**
+  * **Multiply–Accumulate (MAC)-based FIR filter architecture**
+* Verified through **simulation** and **hardware testing**
+* Tested using a **1–30 kHz frequency sweep**
+
+---
+
+## 🎯 Academic & Technical Objectives
+* Gain expertise in **reconfigurable computing** and FPGA-based DSP systems
+* Implement a complete digital audio processing pipeline using **VHDL (IEEE 1076-1993)**
+* Master **`I2C`** and **`I2S`** communication protocols
+* Perform **simulation-driven verification** prior to hardware deployment
+* Compare **HDL-based processing efficiency** with software approaches (`C`, `Java`)
+
+---
+
+## 🛠️ System Architecture
+
+### 🔧 1. Codec Initialization Module (`I2C`)
+* Configures the onboard audio codec
+* Sets sampling frequency, word length, and audio routing paths
+
+### 🔁 2. Serial-to-Parallel Adapter (`I2S`)
+* Converts incoming **serial audio streams** into parallel words
+* Synchronizes data using bit clock and word select signals
+
+### 🧮 3. FIR Filter Core
+* Implements the **low-pass FIR filtering algorithm**
+* Uses **Multiply–Accumulate (MAC)** logic for real-time computation
+
+### ⏱️ 4. Data Tracking & Synchronization
+* Uses control signals such as `ADCstb` and `DACstb`
+* Ensures precise timing alignment between processing stages
+
+---
+
+## 🧪 Verification & Testing
+
+### 🖥️ Software Simulation
+* Simulated all `.vhd` files using:
+  * **Questa-Intel FPGA Edition**
+  * **ModelSim**
+* Verified logic correctness and timing behavior
+
+### 📈 Waveform Analysis
+* Validated:
+  * Shift registers
+  * Bit counters
+  * Word counters
+* Analyzed timing diagrams for protocol compliance
+
+### 💾 Hardware Implementation
+* Synthesized and programmed the design onto the **Cyclone V FPGA**
+* Used **Quartus Prime Programmer**
+
+### 🎛️ Real-Time Frequency Analysis
+* Applied a **1 kHz – 30 kHz frequency sweep**
+* Observed filtered output using a **digital oscilloscope**
+* Confirmed:
+  * Passband response
+  * Cut-off frequency range
+  * High-frequency attenuation
+
+---
+
+## 🏆 Key Outcomes
+* Successful **real-time FIR low-pass filter implementation** on FPGA
+* Stable audio processing using **`I2C` / `I2S` protocols**
+* Verified **low-pass frequency response** through hardware testing
+* Demonstrated deterministic and efficient **HDL-based DSP performance**
+
+---
+
+## 🧰 Tools & Technologies
+* **Quartus Prime Lite Edition 23.1**
+* **Questa-Intel FPGA / ModelSim**
+* **Terasic DE1-SoC Board**
+* Function Generator
+* Digital Oscilloscope
+
+---
+
+## 📂 Repository Structure
+```text
+├── 01_Technical Report
+├── 02_Sourse Code
+├── 03_Output Data
 
 
-## Project Description
-This project focuses on the design and implementation of a Finite Impulse Response (FIR) digital filter.
-
-The system is built on the Terasic DE1-SoC development board using an Intel Cyclone V FPGA.
-
-All hardware logic is written in VHDL to provide high-speed, parallel processing of audio signals.
-
-The design allows for real-time filtering of audio input with a specific cut-off frequency range.
-
-## Academic and Technical Objectives
-Gain expertise in reconfigurable hardware and FPGA design flows.
-
-Implement a complete digital system using VHDL and IEEE 1076-1993 libraries.
-
-Master communication protocols for audio codecs, specifically I2C and I2S.
-
-Compare the performance and energy efficiency of HDL against software platforms like C and Java.
-
-## System Components
-Codec Initialization: Configures the audio chip via I2C for proper input/output operation.
-
-S2P Adapter: Converts Serial audio data to Parallel words for processing in the FPGA.
-
-FIR Filter Block: Executes the mathematical filtering algorithm using Multiply-Accumulate logic.
-
-Data Tracking: Uses ADCstb and DACstb signals to synchronize data between blocks.
-
-## Verification and Testing
-Software Simulation: Tested all .vhd files in Questa-Intel FPGA Edition and ModelSim.
-
-Waveform Analysis: Validated shift registers, bit counters, and word counters through timing diagrams.
-
-Hardware Implementation: Programmed the Cyclone V chip using the Quartus Prime Programmer.
-
-Real-Time Analysis: Used a signal generator to sweep frequencies from 1 kHz to 30 kHz.
-
-Final Result: Plotted the frequency response curve using an Oscilloscope to confirm the low-pass behavior.
-
-## Tools Used
-Quartus Prime Lite Edition 23.1 for synthesis and pin assignment.
-
-Questa-Intel FPGA / ModelSim for VHDL simulation and verification.
-
-Terasic DE1-SoC Board for physical hardware execution.
-
-Standard Lab Equipment including a Function Generator and Digital Oscilloscope.
