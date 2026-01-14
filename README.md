@@ -1,6 +1,6 @@
 # 🚀 Real-Time-FIR-Filter-Implementation-on-DE1-SoC  
 
-** Design and Implementation of a Real-Time FIR Low-Pass Digital Filter on FPGA using VHDL  
+**Design and Implementation of a Real-Time FIR Low-Pass Digital Filter on FPGA using VHDL  
 **Program:** MSc in Electrical & Electronic Engineering  
 **Domain:** FPGA-Based Digital Signal Processing (DSP)
 
