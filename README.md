@@ -101,5 +101,5 @@ Design and Implementation of a Real-Time FIR Low-Pass Digital Filter on FPGA usi
 * 02_Sourse Code
 * 03_Output Data
 
-Author: Arun Chakkyadath Chandran
-Keywords: FIR Filter, FPGA, VHDL, DSP, I2C, I2S, Real-Time Systems
+* Author: Arun Chakkyadath Chandran
+* Keywords: FIR Filter, FPGA, VHDL, DSP, I2C, I2S, Real-Time Systems
