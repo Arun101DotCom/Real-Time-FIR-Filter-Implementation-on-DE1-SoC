@@ -97,8 +97,8 @@ Design and Implementation of a Real-Time FIR Low-Pass Digital Filter on FPGA usi
 
 ## 📂 Repository Structure
 
-* **01_Technical Report
-* **02_Sourse Code
-* **03_Output Data
+* 01_Technical Report
+* 02_Sourse Code
+* 03_Output Data
 
 
